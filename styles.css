@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html,body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background: #2C2F34;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slide .image {
+  overflow: hidden;
+  height: 700px;
+  width: 100%; /* Adjusted width to be responsive */
+}
+.top {
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 60px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top p {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  float: right;
+  margin-left: 10px; /* Adjust the margin as needed */
+  line-height: 22px;
+}
+.top a {
+  color: #fff; /* Set the color to your preferred value */
+  text-decoration: none; /* Remove the underline */
+}
+.top p:hover{
+  color: #9c9c9c;
+}
+.top a:hover {
+  color: #9c9c9c; /* Set the hover color to your preferred value */
+}
+
+.social-top {
+  margin-left: 950px;
+  float: right;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-right: 30px;
+}
+.social-top a {
+  color: #fff; /* Set the color to your preferred value */
+  text-decoration: none; /* Remove the underline */
+}
+.social-top a:hover {
+  color: #9c9c9c; /* Set the hover color to your preferred value */
+}
+.social-top i {
+  margin-right: 10px; /* Adjust the spacing between social icons */
+}
+header {
+  margin-top:15px;
+  background-color: #ffffff;
+  padding: 7px; /* Reduced padding for a smaller header */
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 250px; /* Logo size remains constant */
+  line-height: 50%;
+  float: right;
+
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px; /* Navbar dimensions remain constant */
+  margin-bottom: 10px;
+  margin-left:2px;
+  margin-right: 10px;
+}
+
+.navbar ul {
+  line-height: 50%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar a {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  color: #000000;
+  font-weight: 200;
+  text-decoration: none; /* Add this line to remove underline */
+}
+.navbar ul li a:hover {
+  background-color: hsla(0, 0%, 20%, 0.308);
+  color: #fff;
+}
+.hero-back {
+  width: 100%;
+  height: 100vh;
+  background: url(images/hero.jpg) no-repeat 50% 50%;
+  background-size: 100% 100%;
+  background-attachment: fixed; /* Add this line */
+  position: relative;
+}
+.hero-back img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.parallax-1{
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  background: url(images/image15.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.parallax-2{
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  background: url(images/image14.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.parallax-inner{
+  padding: 25% 0;
+}
+.parallax-inner2{
+  padding: 25% 0;
+}
+.header-text p {
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+  margin-right: 50px;
+  font-family: Poppins;
+  line-height: 30px;
+  color: #fff;
+  font-weight: lighter;
+}
+.header-text h1 {
+  margin-top: 200px;
+  text-align: center;
+  margin-top: 200px;
+  color: #f39a16;
+  line-height: 1.5;
+  font-family: Poppins;
+}
+.header-text2 h1 {
+  margin-top:100px;
+  text-align: center;
+  color: #f39a16;
+  line-height: 1.5;
+  font-family: Poppins;
+}
+.header-text2 p {
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+  margin-right: 50px;
+  font-family: Poppins;
+  line-height: 30px;
+  color: #fff;
+  font-weight: lighter;
+}
+footer {
+  background: rgb(134,130,130);
+  background: linear-gradient(90deg, rgba(134,130,130,1) 0%, rgba(80,78,76,1) 0%, rgba(64,64,64,1) 100%, rgba(117,89,73,0.9864320728291317) 100%);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius:75px ;
+  border-top-right-radius: 75px;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.col {
+  flex-basis:15%;
+  padding:10px;
+}
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis:20%;
+}
+.logo1 {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.col h3 {
+  font-family:Poppins ;
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+
+}
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+  margin-right: 10px;
+}
+.col ul li{
+  list-style: none;
+  margin-bottom:12px;
+}
+
+.col ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.col a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+
+}
+form .fa-regular {
+  font-size: 20px;
+  margin-right: 10px;
+}
+form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+
+}
+form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+form button .fa-solid{
+  font-size: 15px;
+  color: #ccc;
+}
+.social-icons .fa-brands {
+  width: 30px;
+  height: 30px;
+  border-radius:40%;
+  text-align: center;
+  line-height:30px;
+  font-size: 20px;
+  color: #000000;
+  background: #fff;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+
+}
+.copyright {
+  font-family: Poppins;
+  font-weight: 300;
+  text-align: center;
+}
+.section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+}
+.section h1 {
+  color: #333;
+}
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar img.em {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin-right: 0;
+  }
+}
