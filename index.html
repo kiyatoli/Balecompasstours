@@ -57,11 +57,10 @@
     </nav>
     </div>
   </header>
-  <video id="headerVideo" loop muted playsinline>
-    <source data-src="video/background1.mp4" type="video/mp4">
+  <video id="headerVideo" autoplay loop muted playsinline>
+    <source src="video/background1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  
 <div class="header-text">
     <h1> BALE C🧭MPASS TOURS </h1>
     <p>Bale compass tour is based in Bale Mountains National park , to make your time at the park unforgettable and give
@@ -169,27 +168,29 @@
   </footer>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      let isVideoLoaded = false;
-      const headerVideo = document.getElementById('headerVideo');
+      let isExpanded = false;
+      const additionalContent = document.getElementById('additionalContent');
+      const seeMoreBtn = document.getElementById('seeMoreBtn');
   
-      const intersectionObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !isVideoLoaded) {
-            // Load and play the video when it comes into the viewport
-            const source = headerVideo.querySelector('source');
-            headerVideo.setAttribute('src', source.dataset.src);
-            headerVideo.load();
-            headerVideo.play().then(() => {
-              isVideoLoaded = true;
-            });
-          }
-        });
-      });
+      // Set the initial state to hidden
+      additionalContent.style.display = 'none';
   
-      // Start observing the video element
-      intersectionObserver.observe(headerVideo);
+      function toggleContent() {
+        if (isExpanded) {
+          additionalContent.style.display = 'none';
+          seeMoreBtn.textContent = 'See More';
+        } else {
+          additionalContent.style.display = 'block';
+          seeMoreBtn.textContent = 'See Less';
+        }
+  
+        isExpanded = !isExpanded;
+      }
+  
+      seeMoreBtn.addEventListener('click', toggleContent);
     });
   </script>
+  
    
 </body>
 </html>
