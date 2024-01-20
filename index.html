@@ -40,8 +40,6 @@
         <a href="https://t.me/yourchannel" target="_blank"><i class="fa-brands fa-telegram"></i></a>
     </div>
 </div>
-
-
   </div>
   <header>
     <div class="container">
@@ -60,9 +58,10 @@
     </nav>
     </div>
   </header>
-  <div class="hero-back">
-    <img src="images/hero-front.png" alt="">
-</div>
+  <video id="headerVideo" autoplay loop muted playsinline>
+    <source src="video/background1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 <div class="header-text">
     <h1> BALE C🧭MPASS TOURS </h1>
     <p>Bale compass tour is based in Bale Mountains National park , to make your time at the park unforgettable and give
@@ -80,7 +79,7 @@
       </div>
     </section>
    </section>  
-  <div class="header-text2 ">
+   <div class="header-text2" id="headerText2">
     <h1>Land Of Origins</h1>
     <p> 
       Not many countries manage to impress their visitors in a way that Ethiopia does. 
@@ -89,8 +88,23 @@
       The earliest human ancestors were discovered in the Afar Depression in northeastern Ethiopia, with Lucy (Australopithecus afarensis) the most famous of them all.
       Ethiopia is famous for being the place where the coffee bean originated. It is also known for its gold medalists and its rock-hewn churches. 
       Ethiopia is the top honey and coffee producer in Africa and has the largest livestock population in Africa. 
-      Ethiopia has ties with the three main Abrahamic religions.</p>
+      Ethiopia has ties with the three main Abrahamic religions.
+    </p>
+    <div id="additionalContent" class="additional-content">
+      <p>  Not many countries manage to impress their visitors in a way that Ethiopia does. 
+        The country’s breathtaking natural beauty, diverse culture, soulful people, delicious cuisine, and endemic wildlife are perfect for the traveler looking for different experiences.
+        Ethiopia is known as “the land of origins,” where many important archeological and paleontological milestones have been uncovered. 
+        The earliest human ancestors were discovered in the Afar Depression in northeastern Ethiopia, with Lucy (Australopithecus afarensis) the most famous of them all.
+        Ethiopia is famous for being the place where the coffee bean originated. It is also known for its gold medalists and its rock-hewn churches. 
+        Ethiopia is the top honey and coffee producer in Africa and has the largest livestock population in Africa. 
+        Ethiopia has ties with the three main Abrahamic religions.
+      </p>
+    </div>
+    <div class="button-container">
+      <button id="seeMoreBtn" onclick="toggleContent()">See More</button>
+    </div>
   </div>
+
   <section>
     <section class="parallax-2">
       <div class="parallax-inner2">
@@ -98,8 +112,8 @@
     </section>
    </section>
   <footer>
-    <div class="container">
-      <div class="row">
+  <div class="container">
+  <div class="row">
         <div class="col">
           <a href="index.html">
             <img src="images/logo.png" alt="logo1" class="logo1" />
@@ -153,17 +167,31 @@
     <hr>
     <p class="copyright"> BALE C🧭MPASS TOURS <i class="fa-solid fa-copyright"></i> 2024- All Right Reserved</p>
   </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-    $(window).scroll(function () {
-        var scrollPos = $(this).scrollTop();
-        var backgroundSize = 100 + scrollPos + '%';
-        $(".hero-back").css('background-size', backgroundSize);
+    document.addEventListener("DOMContentLoaded", function () {
+      let isExpanded = false;
+      const additionalContent = document.getElementById('additionalContent');
+      const seeMoreBtn = document.getElementById('seeMoreBtn');
+  
+      // Set the initial state to hidden
+      additionalContent.style.display = 'none';
+  
+      function toggleContent() {
+        if (isExpanded) {
+          additionalContent.style.display = 'none';
+          seeMoreBtn.textContent = 'See More';
+        } else {
+          additionalContent.style.display = 'block';
+          seeMoreBtn.textContent = 'See Less';
+        }
+  
+        isExpanded = !isExpanded;
+      }
+  
+      seeMoreBtn.addEventListener('click', toggleContent);
     });
-</script>
-
-
+  </script>
+  
+   
 </body>
-
 </html>
