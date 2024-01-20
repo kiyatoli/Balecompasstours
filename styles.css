@@ -214,6 +214,7 @@ video {
   margin-top: 10px;
 }
 #seeMoreBtn {
+  margin-top:25px;
  background-color: aquamarine;
  width: 130px;
  height: 40px;
